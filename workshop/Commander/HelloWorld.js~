@@ -1,0 +1,11 @@
+
+var parser = require('./parser.js');
+
+
+function display(message){
+
+var url = parser.getUrl();
+console.log(url);
+}
+
+exports.hello = hello

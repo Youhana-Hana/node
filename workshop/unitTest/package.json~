@@ -1,0 +1,15 @@
+{
+    "name": "HelloWorld-testing"
+  , "version": "0.0.1"
+  , "description": "Testing using for Mocha"
+  , "keywords": ["test", "Hello World"]
+  , "main": "index"
+  , "engines": { "node": ">= 0.4.x < 0.7.0" }
+  , "scripts": {
+    "test": "make test"
+  }
+  , "devDependencies": {
+    "mocha": "0.3.x",
+    "sinon": "1.4.x"	
+  }
+}

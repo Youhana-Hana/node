@@ -1,0 +1,34 @@
+var assert = require('assert');
+var sinon = require('sinon');
+var server = require('./../server');
+var http = require('http');
+
+it("calls to start should confiure port and get function", function () {
+
+   var listen = sinon.stub(server.app, 'listen')
+   var  get = sinon.stub(server.app, 'get');
+   var  hello = sinon.stub(server, 'hello');
+
+   server.start();
+
+    assert(get.calledOnce);	
+    assert(get.calledWith('/hello', hello));
+    assert(listen.calledOnce);
+    assert(listen.calledWith(8080));
+    listen.restore();
+    get.restore();
+    server.hello.restore();
+});
+
+
+it("call helloworld should success", function () {
+
+   var  req = {};
+   var res = {};
+   res.send = sinon.stub();
+
+    server.hello(req, res);
+
+    assert(res.send.calledOnce);
+    assert(res.send.calledWith('helloworld'));
+});

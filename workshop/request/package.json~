@@ -1,0 +1,10 @@
+{
+    "name": "URL-Commander-parser"
+  , "version": "0.0.1"
+  , "description": "Parse URl using commander"
+  , "keywords": ["Commander", "URL"]
+  , "main": "index"
+  , "engines": { "node": ">= 0.7.x" }
+  , "dependencies": {"commander": "1.0.x", "request": "2.x.x" }
+  , "devDependencies": {"mocha": "0.3.x","sinon": "1.4.x"}
+}
