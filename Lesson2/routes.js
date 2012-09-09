@@ -1,0 +1,34 @@
+var routes = { };
+
+routes.hello = function(req, res) {
+  res.send('helloworld');
+};
+
+routes.sumallnatural = function(req, res) {
+   var number =  parseInt(req.query["n"]);
+
+   console.log(number);
+
+   process.nextTick(function(){
+	var total = getTotal(number);
+	res.send(total);
+  });
+};
+
+var getTotal = function(number)
+{
+   var total = 0;
+
+  while(number > 0)
+   {
+	total += number;
+        number--; 
+   }
+
+   console.log(total);
+
+   return total;
+};
+
+
+module.exports = routes;
