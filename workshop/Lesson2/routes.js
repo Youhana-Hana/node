@@ -14,7 +14,6 @@ routes.sumallnatural = function(req, res) {
 		routes.sum(number, res, routes.display);
 	});
    
-   console.log("Number is");
    console.log(number);
 };
 
